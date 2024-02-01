@@ -1,0 +1,331 @@
+@font-face {
+  font-family: charter-regular;
+  src: url(../fonts/charter-regular.otf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url(../fonts/charter-italic.otf);
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url(../fonts/charter-bold.otf);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: charter;
+  src: url(../fonts/charter-bold-italic.otf);
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root {
+  font-size: 16px;
+  --white10: #a5a3a5; /* párrafos */
+  --white20: #ffffff; /* h1, h2, h3*/
+  --white30: #251f24; /* background*/
+  --white40: #3a3539; /* background pre */
+}
+
+body {
+  color: var(--white10);
+  font-family: "Nunito Sans", sans-serif;
+  background: var(--white30);
+  font-weight: 400;
+}
+
+/* .header {
+  position: sticky;
+  inset-block-start: 0px;
+} */
+
+.header-content {
+  /* position: absolute; */
+  font-size: 14px;
+  color: var(--white30);
+  /* inset-inline-start: 100px;
+  inset-block-start: 64px;
+  inline-size: 190px; */
+  /* border: 2px solid red; */
+  padding: 20px;
+}
+
+.header-content p {
+  color: var(--white20);
+  font-weight: 700;
+}
+
+header a {
+  color: var(--white30);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--white20);
+}
+
+blockquote {
+  background: #3a3539;
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  border-radius: 8px;
+  padding-inline: 24px;
+  padding-block: 24px;
+  font-size: 24px;
+  line-height: 32px;
+  max-inline-size: 636px;
+}
+
+blockquote span::before {
+  content: "- ";
+}
+
+h1 {
+  font-size: 30px;
+  color: var(--white20);
+  font-weight: 700;
+  margin-block-start: 10px;
+  margin-block-end: 16px;
+}
+
+h1 + p {
+  color: var(--white20);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--white20);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--white20);
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+a {
+  color: var(--white30);
+}
+
+nav details summary {
+  font-weight: 700;
+}
+
+pre {
+  background: var(--white40);
+  padding-inline: 24px;
+  padding-block: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  max-inline-size: 100%;
+  overflow: auto;
+  border-radius: 50px;
+  border: 8px solid rgba(85, 81, 255, 1);
+  box-shadow: -10px 10px 0px 0px #abaaf6;
+  text-align: left;
+}
+
+hr {
+  border-color: rgba(97, 97, 97, 0.2);
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+}
+.hero {
+  /* Para agregar dos o mas imagenes en un background, usamos background-image */
+  background-image: linear-gradient(96deg, #314755 30.63%, #26a0da 102.18%);
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  block-size: 120px;
+  max-inline-size: 100%;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+/* .section-content h3 {
+  counter-increment: titleList;
+} */
+
+.section-content h3::before {
+  content: counter(titleList, decimal) ". ";
+  counter-increment: titleList;
+}
+
+.section-content h3::after {
+  content: "";
+  width: 32px;
+  height: 4px;
+  display: inline-block;
+  background: var(--white40);
+}
+
+.content {
+  width: 200px;
+  height: 200px;
+  background: skyblue;
+  padding: 20px;
+  /* border: 10px solid red; */
+  margin: 50px;
+}
+
+.email {
+  color: #157efb;
+}
+
+.header-content summary {
+  color: var(--white20);
+  font-weight: 700;
+}
+
+.header-content ol li {
+  color: var(--white10);
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.header-content a {
+  color: var(--white10);
+}
+
+.main .section-content:nth-of-type(2) h2 {
+  /* Estilos para la segunda etiqueta h2 dentro de .section-content */
+  margin-block-start: 63px;
+  margin-block-end: 40px;
+}
+
+main .section-content:nth-of-type(1) h2 {
+  /* Estilos para la segunda etiqueta h2 dentro de .section-content */
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  margin-block-end: 16px;
+  max-inline-size: 100%;
+}
+
+img[src="./images/google_chrome.png"][alt="Logo de Google Chrome"][title="Logo de Google Chrome"] {
+  display: block;
+}
+
+main hr:nth-of-type(2) {
+  display: none;
+}
+
+.wrapper {
+  max-inline-size: 903px;
+  margin: auto;
+  /* overflow: auto; */
+}
+
+.main {
+  padding: 20px;
+}
+.main-content {
+  /* position: absolute;
+  inset-inline-start: 310px; */
+  max-inline-size: 903px;
+  /* outline: 2px solid red; */
+  margin: auto;
+}
+
+/* .slider {
+  border: 2px solid red;
+} */
+
+.slider-container {
+  /* border: 2px solid white; */
+  /* block-size: 100px; */
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.video {
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 0;
+}
+
+.slider-bullet-list {
+  text-align: center;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 10px;
+  block-size: 10px;
+  background: white;
+  border-radius: 50%;
+  margin-inline: 5px;
+}
+
+.form input {
+  inline-size: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--white20);
+  background-color: var(--white30);
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  margin-block-end: 24px;
+  color: var(--white20);
+  display: block;
+}
+
+.form input::placeholder {
+  color: var(--white20);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  opacity: 50%;
+}
+
+.form input[type="submit"] {
+  background: rgba(21, 126, 251, 1);
+  border: none;
+}
+
+@media screen and (min-width: 1490px) {
+  .header {
+    position: sticky;
+    inset-block-start: 0px;
+    /* border: 2px solid red; */
+  }
+
+  .header-content {
+    position: absolute;
+    inset-inline-start: 100px;
+    inset-block-start: 64px;
+    inline-size: 190px;
+    padding-inline: 0;
+  }
+
+  .hero {
+    block-size: 350px;
+  }
+
+  .main {
+    padding-inline: 20px;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-block-start: 64px;
+    margin-block-end: 16px;
+  }
+}
